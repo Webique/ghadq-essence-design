@@ -2,95 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Luxury Interior Design System - Dark Bronze Premium Aesthetic
+All colors MUST be HSL for consistent theming.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 20 8% 8%; /* Deep charcoal background */
+    --foreground: 30 15% 85%; /* Warm off-white text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 25 12% 12%; /* Dark bronze card background */
+    --card-foreground: 30 15% 85%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 25 12% 12%;
+    --popover-foreground: 30 15% 85%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 30 45% 65%; /* Rich bronze - #d69d70 */
+    --primary-foreground: 20 8% 8%; /* Dark text on bronze */
+    --primary-glow: 30 55% 75%; /* Lighter bronze for effects */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 25 15% 18%; /* Dark metallic grey */
+    --secondary-foreground: 30 15% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 25 10% 15%; /* Subtle dark background */
+    --muted-foreground: 30 8% 60%; /* Muted text */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 35 40% 55%; /* Warm accent bronze */
+    --accent-foreground: 20 8% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 30 15% 85%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 25 15% 20%; /* Subtle bronze border */
+    --input: 25 15% 18%;
+    --ring: 30 45% 65%; /* Bronze focus rings */
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Premium gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(20 8% 8% / 0.9), hsl(25 12% 12% / 0.8));
+    --gradient-bronze: linear-gradient(135deg, hsl(30 45% 65%), hsl(35 40% 55%));
+    --gradient-dark: linear-gradient(180deg, hsl(20 8% 8%), hsl(25 12% 12%));
+    
+    /* Premium shadows */
+    --shadow-bronze: 0 20px 40px -10px hsl(30 45% 65% / 0.3);
+    --shadow-premium: 0 25px 50px -12px hsl(20 8% 8% / 0.8);
+    --shadow-glow: 0 0 60px hsl(30 55% 75% / 0.2);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Animations */
+    --transition-luxury: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar variables */
+    --sidebar-background: 25 12% 12%;
+    --sidebar-foreground: 30 15% 85%;
+    --sidebar-primary: 30 45% 65%;
+    --sidebar-primary-foreground: 20 8% 8%;
+    --sidebar-accent: 25 15% 18%;
+    --sidebar-accent-foreground: 30 15% 85%;
+    --sidebar-border: 25 15% 20%;
+    --sidebar-ring: 30 45% 65%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Already optimized for dark theme - no changes needed */
+    --background: 20 8% 8%;
+    --foreground: 30 15% 85%;
+    --card: 25 12% 12%;
+    --card-foreground: 30 15% 85%;
+    --popover: 25 12% 12%;
+    --popover-foreground: 30 15% 85%;
+    --primary: 30 45% 65%;
+    --primary-foreground: 20 8% 8%;
+    --secondary: 25 15% 18%;
+    --secondary-foreground: 30 15% 85%;
+    --muted: 25 10% 15%;
+    --muted-foreground: 30 8% 60%;
+    --accent: 35 40% 55%;
+    --accent-foreground: 20 8% 8%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 30 15% 85%;
+    --border: 25 15% 20%;
+    --input: 25 15% 18%;
+    --ring: 30 45% 65%;
   }
 }
 
@@ -100,6 +94,110 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
+    direction: ltr; /* Default to LTR, will be toggled via JS */
+  }
+
+  /* RTL Support */
+  [dir="rtl"] {
+    font-family: 'Noto Kufi Arabic', 'Poppins', sans-serif;
+  }
+
+  [dir="ltr"] {
+    font-family: 'Poppins', 'Noto Kufi Arabic', sans-serif;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Premium text rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer components {
+  /* Premium button variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground 
+           px-8 py-4 rounded-lg font-medium tracking-wide
+           transition-all duration-300 ease-out
+           hover:shadow-[var(--shadow-bronze)] hover:scale-105
+           active:scale-95;
+  }
+
+  .btn-ghost-bronze {
+    @apply border border-primary/30 text-primary bg-transparent
+           px-6 py-3 rounded-lg font-medium
+           transition-all duration-300 ease-out
+           hover:bg-primary/10 hover:border-primary/60
+           hover:shadow-[var(--shadow-glow)];
+  }
+
+  /* Premium section styling */
+  .section-premium {
+    @apply relative overflow-hidden;
+  }
+
+  .section-premium::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent
+           pointer-events-none;
+  }
+
+  /* Typography styles */
+  .text-hero {
+    @apply text-5xl lg:text-7xl font-bold leading-tight tracking-tight;
+    background: var(--gradient-bronze);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-premium {
+    @apply text-lg leading-relaxed text-muted-foreground;
+  }
+
+  /* Animation utilities */
+  .animate-fade-in-up {
+    @apply opacity-0 translate-y-8;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-[var(--shadow-premium)];
+  }
+
+  /* Premium card styling */
+  .card-premium {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50
+           rounded-xl p-6 transition-all duration-300 ease-out
+           hover:bg-card hover:border-primary/30
+           hover:shadow-[var(--shadow-bronze)];
   }
 }
