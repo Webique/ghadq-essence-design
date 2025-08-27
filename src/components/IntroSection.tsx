@@ -56,10 +56,12 @@ const IntroSection = () => {
           {/* CTA Button */}
           <Button 
             onClick={handleWhatsAppClick}
-            className="btn-hero text-lg px-8 py-4 hover-lift"
+            className="btn-hero text-base md:text-lg px-4 md:px-8 py-3 md:py-4 hover-lift w-full md:w-auto max-w-sm md:max-w-none mx-auto"
           >
             <MessageCircle className="w-5 h-5 me-2" />
-            {t('ctaMain')}
+            <span className="whitespace-normal text-center leading-tight">
+              {t('ctaMain')}
+            </span>
           </Button>
         </div>
       </div>

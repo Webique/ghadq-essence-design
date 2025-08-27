@@ -42,22 +42,22 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
               key={service.key}
-              className="card-premium hover-lift text-center"
+              className="card-premium hover-lift text-center p-8"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Service Icon */}
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-8">
                 <div className="p-4 rounded-full bg-primary/10 border border-primary/20">
                   {service.icon}
                 </div>
               </div>
 
               {/* Service Title */}
-              <h3 className="text-xl font-bold mb-4 text-foreground">
+              <h3 className="text-xl font-bold mb-6 text-foreground leading-tight">
                 {t(service.key)}
               </h3>
 
@@ -67,20 +67,6 @@ const ServicesSection = () => {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div className="text-center">
-          <p className="text-xl mb-8 text-foreground font-medium">
-            {t('servicesCta')}
-          </p>
-          <Button 
-            onClick={handleWhatsAppClick}
-            className="btn-hero hover-lift"
-          >
-            <MessageCircle className="w-5 h-5 me-2" />
-            تواصل معنا
-          </Button>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import heroImage from '@/assets/hero-architecture.jpg';
+import heroImage from '@/assets/hero-architecture.webp';
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -12,7 +12,7 @@ const HeroSection = () => {
         <img 
           src={heroImage} 
           alt="Luxury Interior Architecture"
-          className="w-full h-full object-cover animate-parallax"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero"></div>
       </div>
@@ -20,7 +20,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         {/* Company Names */}
-        <div className="mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <div className="mb-8 opacity-100">
           <div className="text-sm md:text-base text-muted-foreground mb-2 font-arabic">
             {t('companyNameArabic')}
           </div>
@@ -30,18 +30,12 @@ const HeroSection = () => {
         </div>
 
         {/* Main Hero Title */}
-        <h1 
-          className="text-hero mb-8 animate-fade-in-up"
-          style={{ animationDelay: '0.4s' }}
-        >
+        <h1 className="text-hero mb-8 opacity-100">
           {t('heroTitle')}
         </h1>
 
         {/* Decorative Line */}
-        <div 
-          className="w-24 h-1 bg-gradient-bronze mx-auto animate-fade-in-up"
-          style={{ animationDelay: '0.6s' }}
-        ></div>
+        <div className="w-24 h-1 bg-gradient-bronze mx-auto opacity-100"></div>
       </div>
 
       {/* Scroll Indicator */}

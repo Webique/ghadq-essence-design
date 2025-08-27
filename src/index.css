@@ -124,10 +124,11 @@ All colors MUST be HSL for consistent theming.
   /* Premium button variants */
   .btn-hero {
     @apply bg-gradient-to-r from-primary to-accent text-primary-foreground 
-           px-8 py-4 rounded-lg font-medium tracking-wide
+           px-4 md:px-8 py-3 md:py-4 rounded-lg font-medium tracking-wide
            transition-all duration-300 ease-out
            hover:shadow-[var(--shadow-bronze)] hover:scale-105
-           active:scale-95;
+           active:scale-95
+           text-center whitespace-normal leading-tight;
   }
 
   .btn-ghost-bronze {
@@ -156,32 +157,32 @@ All colors MUST be HSL for consistent theming.
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    /* Fallback for browsers that don't support gradient text */
+    color: hsl(var(--primary));
   }
 
   .text-premium {
     @apply text-lg leading-relaxed text-muted-foreground;
   }
 
-  /* Animation utilities */
-  .animate-fade-in-up {
-    @apply opacity-0 translate-y-8;
-    animation: fadeInUp 0.8s ease-out forwards;
+  /* Ensure text is always visible */
+  .text-hero {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    position: relative !important;
+    z-index: 10 !important;
   }
 
-  .animate-parallax {
-    transform: translateZ(0);
-    will-change: transform;
+  /* Additional safeguards for hero content */
+  #home .relative.z-10 {
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(2rem);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  #home .relative.z-10 * {
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   /* Hover effects */
