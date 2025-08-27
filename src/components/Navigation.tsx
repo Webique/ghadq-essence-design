@@ -19,10 +19,13 @@ const Navigation = () => {
     { key: 'contact', href: '#contact' },
   ];
 
+  // Reverse the navigation items for Arabic
+  const displayNavItems = language === 'ar' ? [...navItems].reverse() : navItems;
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+        <div className={`flex items-center justify-between ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-xl font-bold text-primary">
@@ -31,12 +34,16 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
-            {navItems.map((item) => (
+          <div className="hidden md:flex items-center">
+            {displayNavItems.map((item, index) => (
               <a
                 key={item.key}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className={`text-foreground hover:text-primary transition-colors duration-300 font-medium px-2 py-1 ${
+                  language === 'ar' 
+                    ? index === 0 ? 'mr-0' : 'mr-8'
+                    : index === 0 ? 'ml-0' : 'ml-8'
+                }`}
               >
                 {t(item.key)}
               </a>
@@ -44,7 +51,7 @@ const Navigation = () => {
           </div>
 
           {/* Language Toggle & Mobile Menu */}
-          <div className="flex items-center space-x-4 rtl:space-x-reverse">
+          <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
             <Button
               variant="ghost"
               size="sm"
@@ -71,7 +78,7 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border/50">
             <div className="flex flex-col space-y-4 pt-4">
-              {navItems.map((item) => (
+              {displayNavItems.map((item) => (
                 <a
                   key={item.key}
                   href={item.href}
