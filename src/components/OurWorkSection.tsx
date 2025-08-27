@@ -249,7 +249,7 @@ const OurWorkSection = () => {
                   {currentProjectData.images.slice(0, 4).map((image, index) => (
                     <div key={index} className="relative overflow-hidden rounded-xl aspect-square">
                       <img
-                        src={`/src/assets/${image}`}
+                        src={`/images/${image}`}
                         alt={`Project ${currentProject + 1} - Image ${index + 1}`}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />

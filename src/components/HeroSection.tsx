@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import heroImage from '@/assets/hero-architecture.webp';
+// Hero image is now served from public folder
+const heroImage = '/images/hero-architecture.webp';
 
 const HeroSection = () => {
   const { t } = useLanguage();
