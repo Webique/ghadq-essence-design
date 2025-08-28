@@ -60,8 +60,8 @@ const PrivacyPolicy = () => {
             <div className="w-24 h-1 bg-gradient-bronze mx-auto mb-8"></div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               {language === 'ar' 
-                ? 'مع غدق الإبداع للتصميم الداخلي والخارجي 🌟'
-                : 'With Ghadq AlEbda for Interior & Exterior Design 🌟'
+                ? 'مع غدق الإبداع للتصميم الداخلي والخارجي'
+                : 'With Ghadq AlEbda for Interior & Exterior Design'
               }
             </p>
           </div>
