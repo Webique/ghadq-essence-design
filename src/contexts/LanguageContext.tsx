@@ -45,7 +45,7 @@ const translations = {
     consulting: "Consulting & Planning",
     
     interiorDesc: "Modern & classic designs for living rooms, bedrooms, kitchens. Tailored choices of colors, furniture, and lighting. Smart storage & space optimization.",
-    exteriorDesc: "Elegant landscaping & garden layouts. Facade enhancements with practical beauty. Durable, sustainable modern materials.",
+    exteriorDesc: "تحسينات للواجهات بجمال عملي. تنسيق حدائق أنيق وتخطيط المساحات الخضراء. مواد عصرية متينة ومستدامة.",
     consultingDesc: "Space evaluation & detailed design planning. Innovative proposals for renovation or expansion.",
     
     servicesCta: "Ready to transform your space? Contact us today!",
@@ -110,7 +110,7 @@ const translations = {
     consulting: "الاستشارات والتخطيط",
     
     interiorDesc: "تصاميم عصرية وكلاسيكية لغرف المعيشة والنوم والمطابخ. اختيارات مخصصة للألوان والأثاث والإضاءة. حلول ذكية للتخزين وتحسين المساحة.",
-    exteriorDesc: "تنسيق حدائق أنيق وتخطيط المساحات الخضراء. تحسينات للواجهات بجمال عملي. مواد عصرية متينة ومستدامة.",
+    exteriorDesc: "تحسينات للواجهات بجمال عملي. تنسيق حدائق أنيق وتخطيط المساحات الخضراء. مواد عصرية متينة ومستدامة.",
     consultingDesc: "تقييم المساحات والتخطيط التفصيلي للتصميم. اقتراحات مبتكرة للتجديد أو التوسع.",
     
     servicesCta: "هل أنت مستعد لتحويل مساحتك؟ تواصل معنا الآن!",

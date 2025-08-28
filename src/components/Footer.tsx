@@ -37,7 +37,7 @@ const Footer = () => {
           {/* Company Details */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-foreground">
-              {language === 'ar' ? 'معلومات الشركة' : 'Company Details'}
+              {language === 'ar' ? 'معلومات المؤسسة' : 'Company Details'}
             </h4>
             <div className="space-y-2 text-muted-foreground">
               <p>
