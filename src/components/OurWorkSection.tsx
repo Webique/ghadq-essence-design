@@ -315,8 +315,8 @@ const OurWorkSection = () => {
                   </h4>
                   <ul className="space-y-3">
                     {currentProjectData.features[language].map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                      <li key={index} className={`flex items-start gap-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                        <div className={`w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0 ${language === 'ar' ? 'ml-3' : 'mr-3'}`} />
                         <span className="text-muted-foreground">{feature}</span>
                       </li>
                     ))}

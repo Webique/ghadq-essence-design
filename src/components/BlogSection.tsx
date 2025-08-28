@@ -163,8 +163,8 @@ const BlogSection = () => {
                     </h4>
                     <ul className="space-y-2">
                       {post.keyPoints[language].map((point, index) => (
-                        <li key={index} className="flex items-start justify-center md:justify-start">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <li key={index} className={`flex items-start gap-3 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                          <div className={`w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0 ${language === 'ar' ? 'ml-3' : 'mr-3'}`}></div>
                           <span className="text-muted-foreground">{point}</span>
                         </li>
                       ))}
