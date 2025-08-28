@@ -133,8 +133,8 @@ const BlogSection = () => {
             return (
               <article key={post.id} className="group relative overflow-hidden rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
                 {/* Header */}
-                <div className="p-8">
-                  <div className="flex items-center mb-6">
+                <div className="p-8 text-center md:text-start">
+                  <div className="flex items-center justify-center md:justify-start mb-6">
                     <div className={`p-3 rounded-xl bg-gradient-to-r ${post.color} text-primary mr-4`}>
                       <IconComponent className="w-6 h-6" />
                     </div>
@@ -163,7 +163,7 @@ const BlogSection = () => {
                     </h4>
                     <ul className="space-y-2">
                       {post.keyPoints[language].map((point, index) => (
-                        <li key={index} className="flex items-start">
+                        <li key={index} className="flex items-start justify-center md:justify-start">
                           <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
                           <span className="text-muted-foreground">{point}</span>
                         </li>

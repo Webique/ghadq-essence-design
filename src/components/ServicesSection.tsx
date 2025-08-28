@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Home, TreePine, Lightbulb, MessageCircle } from 'lucide-react';
+import { Home, Building, Lightbulb, MessageCircle } from 'lucide-react';
 
 const ServicesSection = () => {
   const { t } = useLanguage();
@@ -14,7 +14,7 @@ const ServicesSection = () => {
     },
     {
       key: 'exteriorDesign',
-      icon: <TreePine className="w-8 h-8 text-primary" />,
+      icon: <Building className="w-8 h-8 text-primary" />,
       descKey: 'exteriorDesc'
     },
     {
