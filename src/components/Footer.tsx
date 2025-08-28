@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t border-border/50">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-primary">
@@ -31,6 +31,27 @@ const Footer = () => {
               <p>{t('phone')}: +966 53 464 5312</p>
               <p>{t('email')}: design0msh@gmail.com</p>
               <p>{t('location')}: {t('riyadh')}</p>
+            </div>
+          </div>
+
+          {/* Company Details */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-foreground">
+              {language === 'ar' ? 'معلومات الشركة' : 'Company Details'}
+            </h4>
+            <div className="space-y-2 text-muted-foreground">
+              <p>
+                {language === 'ar' ? 'السجل التجاري' : 'Commercial Registry'}: 1011157669
+              </p>
+              <p>
+                {language === 'ar' 
+                  ? 'المملكة العربية السعودية/الرياض'
+                  : 'Saudi Arabia/Riyadh'
+                }
+              </p>
+              <p>
+                {language === 'ar' ? 'العملة' : 'Currency'}: {language === 'ar' ? 'ريال سعودي' : 'Saudi Riyal'}
+              </p>
             </div>
           </div>
         </div>

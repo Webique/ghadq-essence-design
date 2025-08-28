@@ -70,11 +70,11 @@ export default {
 				},
 				// Custom color palette
 				palette: {
-					lightest: '#D7C4A0',
-					light: '#C1AB85',
-					medium: '#AE8F65',
-					mediumDark: '#9A8365',
-					darkest: '#846745',
+					background: '#CFD4CE', // rgba(207,212,206,255) - Light gray-green background
+					text: '#444C37', // rgba(68,76,55,255) - Dark olive text
+					outline: '#878E7C', // rgba(135,142,124,255) - Medium gray-green for outlines/buttons
+					backgroundLight: '#D8DDD7', // Lighter gray-green
+					backgroundDark: '#C5CAC4', // Darker gray-green
 				}
 			},
 			backgroundImage: {

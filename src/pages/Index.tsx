@@ -7,6 +7,7 @@ import ServicesSection from '@/components/ServicesSection';
 import OurWorkSection from '@/components/OurWorkSection';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
+import PrivacyPolicy from '@/components/PrivacyPolicy';
 import Footer from '@/components/Footer';
 import SplashScreen from '@/components/SplashScreen';
 
@@ -41,6 +42,7 @@ const Index = () => {
             <OurWorkSection />
             <BlogSection />
             <ContactSection />
+            <PrivacyPolicy />
           </main>
           <Footer />
         </div>

@@ -8,83 +8,83 @@ All colors MUST be HSL for consistent theming.
 
 @layer base {
   :root {
-    --background: 45 30% 85%; /* #D7C4A0 - Lightest background */
-    --foreground: 35 25% 30%; /* #846745 - Darkest text */
+    --background: 120 8% 82%; /* rgba(207,212,206,255) - Light gray-green background */
+    --foreground: 80 15% 25%; /* rgba(68,76,55,255) - Dark olive text */
 
-    --card: 40 25% 80%; /* #C1AB85 - Light card background */
-    --card-foreground: 35 25% 30%;
+    --card: 120 8% 85%; /* Slightly lighter gray-green card background */
+    --card-foreground: 80 15% 25%;
 
-    --popover: 40 25% 80%;
-    --popover-foreground: 35 25% 30%;
+    --popover: 120 8% 85%;
+    --popover-foreground: 80 15% 25%;
 
-    --primary: 35 25% 30%; /* #846745 - Darkest primary */
-    --primary-foreground: 45 30% 85%; /* Light text on dark primary */
-    --primary-glow: 35 30% 40%; /* Lighter primary for effects */
+    --primary: 80 15% 25%; /* rgba(68,76,55,255) - Dark olive primary */
+    --primary-foreground: 120 8% 82%; /* Light background on dark olive */
+    --primary-glow: 80 20% 35%; /* Lighter olive for effects */
 
-    --secondary: 35 20% 55%; /* #9A8365 - Medium-dark secondary */
-    --secondary-foreground: 45 30% 85%;
+    --secondary: 120 8% 70%; /* rgba(135,142,124,255) - Medium gray-green */
+    --secondary-foreground: 80 15% 25%;
 
-    --muted: 40 20% 75%; /* #AE8F65 - Medium muted background */
-    --muted-foreground: 35 20% 45%; /* Muted text */
+    --muted: 120 8% 75%; /* Muted gray-green background */
+    --muted-foreground: 80 15% 40%; /* Muted olive text */
 
-    --accent: 35 25% 45%; /* #9A8365 - Medium accent */
-    --accent-foreground: 45 30% 85%;
+    --accent: 120 8% 70%; /* rgba(135,142,124,255) - Medium gray-green accent */
+    --accent-foreground: 80 15% 25%;
 
     --destructive: 0 70% 50%;
-    --destructive-foreground: 45 30% 85%;
+    --destructive-foreground: 120 8% 82%;
 
-    --border: 35 20% 55%; /* #9A8365 - Medium border */
-    --input: 40 20% 75%;
-    --ring: 35 25% 30%; /* #846745 - Dark focus rings */
+    --border: 120 8% 70%; /* rgba(135,142,124,255) - Medium gray-green border */
+    --input: 120 8% 75%;
+    --ring: 80 15% 25%; /* rgba(68,76,55,255) - Dark olive focus rings */
 
     --radius: 0.75rem;
 
     /* Premium gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(45 30% 85% / 0.9), hsl(40 25% 80% / 0.8));
-    --gradient-bronze: linear-gradient(135deg, hsl(35 25% 30%), hsl(35 20% 45%));
-    --gradient-dark: linear-gradient(180deg, hsl(45 30% 85%), hsl(40 25% 80%));
+    --gradient-hero: linear-gradient(135deg, hsl(120 8% 82% / 0.9), hsl(120 8% 85% / 0.8));
+    --gradient-bronze: linear-gradient(135deg, hsl(80 15% 25%), hsl(120 8% 70%));
+    --gradient-dark: linear-gradient(180deg, hsl(120 8% 82%), hsl(120 8% 85%));
     
     /* Premium shadows */
-    --shadow-bronze: 0 20px 40px -10px hsl(35 25% 30% / 0.3);
-    --shadow-premium: 0 25px 50px -12px hsl(45 30% 85% / 0.8);
-    --shadow-glow: 0 0 60px hsl(35 30% 40% / 0.2);
+    --shadow-bronze: 0 20px 40px -10px hsl(80 15% 25% / 0.3);
+    --shadow-premium: 0 25px 50px -12px hsl(120 8% 82% / 0.8);
+    --shadow-glow: 0 0 60px hsl(120 8% 70% / 0.2);
 
     /* Animations */
     --transition-luxury: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     /* Sidebar variables */
-    --sidebar-background: 40 25% 80%;
-    --sidebar-foreground: 35 25% 30%;
-    --sidebar-primary: 35 25% 30%;
-    --sidebar-primary-foreground: 45 30% 85%;
-    --sidebar-accent: 35 20% 55%;
-    --sidebar-accent-foreground: 45 30% 85%;
-    --sidebar-border: 35 20% 55%;
-    --sidebar-ring: 35 25% 30%;
+    --sidebar-background: 120 8% 85%;
+    --sidebar-foreground: 80 15% 25%;
+    --sidebar-primary: 80 15% 25%;
+    --sidebar-primary-foreground: 120 8% 82%;
+    --sidebar-accent: 120 8% 70%;
+    --sidebar-accent-foreground: 80 15% 25%;
+    --sidebar-border: 120 8% 70%;
+    --sidebar-ring: 80 15% 25%;
   }
 
   .dark {
     /* Updated dark theme with new colors */
-    --background: 35 25% 30%; /* #846745 - Darkest background */
-    --foreground: 45 30% 85%; /* #D7C4A0 - Lightest text */
-    --card: 35 20% 45%; /* #9A8365 - Dark card background */
-    --card-foreground: 45 30% 85%;
-    --popover: 35 20% 45%;
-    --popover-foreground: 45 30% 85%;
-    --primary: 40 25% 80%; /* #C1AB85 - Light primary */
-    --primary-foreground: 35 25% 30%;
-    --secondary: 40 20% 75%; /* #AE8F65 - Medium secondary */
-    --secondary-foreground: 45 30% 85%;
-    --muted: 35 20% 55%; /* #9A8365 - Medium-dark muted */
-    --muted-foreground: 40 25% 80%;
-    --accent: 40 25% 80%; /* #C1AB85 - Light accent */
-    --accent-foreground: 35 25% 30%;
+    --background: 80 15% 20%; /* Darker olive background */
+    --foreground: 120 8% 90%; /* Very light gray-green text */
+    --card: 80 12% 25%; /* Dark olive card background */
+    --card-foreground: 120 8% 90%;
+    --popover: 80 12% 25%;
+    --popover-foreground: 120 8% 90%;
+    --primary: 120 8% 70%; /* Medium gray-green primary */
+    --primary-foreground: 80 15% 20%;
+    --secondary: 120 8% 60%; /* Medium-dark gray-green secondary */
+    --secondary-foreground: 80 15% 90%;
+    --muted: 80 8% 25%; /* Dark olive muted */
+    --muted-foreground: 120 8% 70%;
+    --accent: 120 8% 70%; /* Medium gray-green accent */
+    --accent-foreground: 80 15% 20%;
     --destructive: 0 70% 50%;
-    --destructive-foreground: 45 30% 85%;
-    --border: 40 20% 75%; /* #AE8F65 - Medium border */
-    --input: 35 20% 55%;
-    --ring: 40 25% 80%; /* #C1AB85 - Light focus rings */
+    --destructive-foreground: 120 8% 90%;
+    --border: 120 8% 60%; /* Medium gray-green border */
+    --input: 80 8% 25%;
+    --ring: 120 8% 70%; /* Medium gray-green focus rings */
   }
 }
 

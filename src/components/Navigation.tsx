@@ -35,16 +35,12 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className={`hidden md:flex items-center ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-            {displayNavItems.map((item, index) => (
+          <div className={`hidden md:flex items-center space-x-8 ${language === 'ar' ? 'space-x-reverse' : ''}`}>
+            {displayNavItems.map((item) => (
               <a
                 key={item.key}
                 href={item.href}
-                className={`text-foreground hover:text-primary transition-colors duration-300 font-medium px-2 py-1 ${
-                  language === 'ar' 
-                    ? index === displayNavItems.length - 1 ? 'mr-0' : 'mr-8'
-                    : index === displayNavItems.length - 1 ? 'ml-0' : 'ml-8'
-                }`}
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium px-2 py-1"
               >
                 {t(item.key)}
               </a>

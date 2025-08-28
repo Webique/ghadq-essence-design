@@ -32,12 +32,11 @@ const translations = {
     
     // Features
     feature1: "Innovative design balancing beauty & function",
-    feature2: "Use of cutting-edge technology & premium materials",
     feature3: "Personalized consultations for precise execution",
     feature4: "Full project supervision from concept to delivery",
     
     // CTA
-    ctaMain: "Start your project with us today – Book your consultation via WhatsApp",
+    ctaMain: "Book your consultation via WhatsApp",
     
     // Services
     servicesTitle: "Our Services to Bring Your Vision to Life",
@@ -98,12 +97,11 @@ const translations = {
     
     // Features
     feature1: "تصميم مبتكر يوازن بين الجمال والوظيفة",
-    feature2: "استخدام أحدث التقنيات والمواد",
     feature3: "استشارات شخصية لضمان تنفيذ رؤيتك",
     feature4: "متابعة كاملة من البداية حتى التسليم",
     
     // CTA
-    ctaMain: "ابدأ مشروعك معنا اليوم – احجز استشارتك عبر الواتس اب",
+    ctaMain: "احجز استشارتك عبر الواتس اب",
     
     // Services
     servicesTitle: "خدماتنا لتجسيد رؤيتك",

@@ -8,7 +8,6 @@ const IntroSection = () => {
 
   const features = [
     { key: 'feature1', icon: <CheckCircle className="w-5 h-5 text-primary" /> },
-    { key: 'feature2', icon: <CheckCircle className="w-5 h-5 text-primary" /> },
     { key: 'feature3', icon: <CheckCircle className="w-5 h-5 text-primary" /> },
     { key: 'feature4', icon: <CheckCircle className="w-5 h-5 text-primary" /> },
   ];
