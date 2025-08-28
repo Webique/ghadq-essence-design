@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-bronze mx-auto mb-8"></div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              {language === 'ar' 
+              {language === 'ar'
                 ? 'مع غدق الإبداع للتصميم الداخلي والخارجي'
                 : 'With Ghadq AlEbda for Interior & Exterior Design'
               }
@@ -69,12 +69,12 @@ const PrivacyPolicy = () => {
           {/* Policies Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {policies.map((policy, index) => (
-              <div 
+              <div
                 key={index}
-                className="flex items-start space-x-4 rtl:space-x-reverse text-start p-6 card-premium hover-lift"
+                className="flex items-start space-x-4 rtl:space-x-reverse text-center md:text-start p-6 card-premium hover-lift"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex-shrink-0 mt-1">
+                <div className="flex-shrink-0 mt-1 mx-auto md:mx-0">
                   {policy.icon}
                 </div>
                 <div>
@@ -92,7 +92,7 @@ const PrivacyPolicy = () => {
               <Star className="w-6 h-6 text-primary" />
             </div>
             <p className="text-lg text-foreground font-medium mb-6">
-              {language === 'ar' 
+              {language === 'ar'
                 ? 'لأي استفسار أو فكرة، راسلنا واحنا جاهزين!'
                 : 'For any questions or ideas, contact us and we\'re ready!'
               }
