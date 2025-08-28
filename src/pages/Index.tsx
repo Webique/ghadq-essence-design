@@ -22,6 +22,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Navigation is always visible and functional */}
+      <Navigation />
+      
       {showSplash ? (
         <SplashScreen onComplete={handleSplashComplete} />
       ) : (
@@ -30,7 +33,6 @@ const Index = () => {
             mainContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
-          <Navigation />
           <main>
             <HeroSection />
             <IntroSection />
