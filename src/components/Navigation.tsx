@@ -19,8 +19,9 @@ const Navigation = () => {
     { key: 'contact', href: '#contact' },
   ];
 
-  // Reverse the navigation items for Arabic
-  const displayNavItems = language === 'ar' ? [...navItems].reverse() : navItems;
+  // Keep navigation items in the same order for both languages
+  // Home should always be first
+  const displayNavItems = navItems;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
@@ -34,15 +35,15 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center">
+          <div className={`hidden md:flex items-center ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
             {displayNavItems.map((item, index) => (
               <a
                 key={item.key}
                 href={item.href}
                 className={`text-foreground hover:text-primary transition-colors duration-300 font-medium px-2 py-1 ${
                   language === 'ar' 
-                    ? index === 0 ? 'mr-0' : 'mr-8'
-                    : index === 0 ? 'ml-0' : 'ml-8'
+                    ? index === displayNavItems.length - 1 ? 'mr-0' : 'mr-8'
+                    : index === displayNavItems.length - 1 ? 'ml-0' : 'ml-8'
                 }`}
               >
                 {t(item.key)}
