@@ -29,9 +29,11 @@ const Navigation = () => {
         <div className={`flex items-center justify-between ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-primary">
-              {language === 'ar' ? 'غدق الإبداع' : 'Ghadq AlEbda'}
-            </h1>
+            <img 
+              src="/images/hello.png" 
+              alt={language === 'ar' ? 'غدق الإبداع' : 'Ghadq AlEbda'} 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
